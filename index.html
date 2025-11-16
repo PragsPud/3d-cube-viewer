@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cube Image Viewer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 3D Cube Image Viewer</h1>
+        
+        <div class="upload-section">
+            <div class="upload-grid">
+                <div class="upload-item">
+                    <label>Front Face</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="front" accept="image/*">
+                        <label for="front" class="file-input-label">Choose Image</label>
+                    </div>
+                    <img class="preview-img" id="preview-front" alt="Front preview">
+                </div>
+                <div class="upload-item">
+                    <label>Back Face</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="back" accept="image/*">
+                        <label for="back" class="file-input-label">Choose Image</label>
+                    </div>
+                    <img class="preview-img" id="preview-back" alt="Back preview">
+                </div>
+                <div class="upload-item">
+                    <label>Top Face</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="top" accept="image/*">
+                        <label for="top" class="file-input-label">Choose Image</label>
+                    </div>
+                    <img class="preview-img" id="preview-top" alt="Top preview">
+                </div>
+                <div class="upload-item">
+                    <label>Bottom Face</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="bottom" accept="image/*">
+                        <label for="bottom" class="file-input-label">Choose Image</label>
+                    </div>
+                    <img class="preview-img" id="preview-bottom" alt="Bottom preview">
+                </div>
+                <div class="upload-item">
+                    <label>Right Face</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="right" accept="image/*">
+                        <label for="right" class="file-input-label">Choose Image</label>
+                    </div>
+                    <img class="preview-img" id="preview-right" alt="Right preview">
+                </div>
+                <div class="upload-item">
+                    <label>Left Face</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="left" accept="image/*">
+                        <label for="left" class="file-input-label">Choose Image</label>
+                    </div>
+                    <img class="preview-img" id="preview-left" alt="Left preview">
+                </div>
+            </div>
+            <button class="btn-generate" id="generateBtn" disabled>Generate 3D Cube</button>
+        </div>
+
+        <div class="viewer-section" id="viewerSection">
+            <div id="canvas-container"></div>
+            <div class="controls">
+                <p><strong>Controls:</strong></p>
+                <p>🖱️ Left Click + Drag: Rotate</p>
+                <p>🖱️ Right Click + Drag: Pan</p>
+                <p>🖱️ Scroll: Zoom</p>
+                <button class="btn-reset" id="resetBtn">Upload New Images</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
